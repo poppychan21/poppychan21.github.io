@@ -5,4 +5,4 @@ Welcome to my portfolio website! ⭐ This project showcases my bio, work experie
 ## Features
 - **No Backend Required** - Simple HTML, CSS, and JavaScript. 🤗
 - **Modern Design** - Styled with CSS and responsive for all devices. 🫣
-- **Projects Section"" - Displays my best work. 😎
+- **Projects Section** - Displays my best work. 😎
