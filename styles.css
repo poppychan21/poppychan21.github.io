@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to right, white, #a9e6cf, #90ee90);
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-container .links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-container .links a {
+    position: relative;
+    font-size: 1.2rem;
+    color: black;
+    /*text-decoration removes underlines*/
+    text-decoration: none;
+    font-weight: 500;
+    transform: 0.3s linear;
+}
+
+/* STUDY THIS */
+.nav-container .links a::before {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #0c3d25;
+    transition: 0.2s linear;
+}
+
+/* STUDY THIS */
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+.nav-container .contact-btn {
+    background-color: transparent;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: 2px solid rgba(22, 65, 11, 0.2);
+    transition: 0.3s linear;
+}
+
+.nav-container .contact-btn a {
+    color: rgba(255, 255, 255, 0.959);
+}
+
+.nav-container .contact-btn:hover,
+.nav-container .contact-btn:hover a {
+    background-color: rgba(29, 83, 15, 0.411);
+    color: white;
+}
+
+#about .main-container-about img {
+    width: 300px;
+    /* Adjust size as needed */
+    height: 300px;
+    /* Ensure a perfect circle */
+    border-radius: 50%;
+    /* Makes it circular */
+    border: 5px solid #88e78b;
+    /* Add a green border */
+    box-shadow: 0 4px 8px rgba(8, 8, 8, 0.2);
+    /* Adds depth */
+    object-fit: cover;
+    /* Ensures the image fills the frame */
+}
