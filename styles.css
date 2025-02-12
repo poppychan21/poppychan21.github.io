@@ -13,7 +13,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(to right, white, #a9e6cf, #90ee90);
+    background: linear-gradient(to right, rgb(226, 224, 224), #7be2bb, #8ab98a);
 }
 
 nav {
@@ -26,14 +26,27 @@ nav {
     width: 100%;
     height: 100%;
     display: flex;
+    /* Centers them horizontally */
     justify-content: space-around;
+    /* Centers them vertically */
     align-items: center;
+}
+
+.logo {
+    color: black;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.logo span {
+    color: black;
 }
 
 .nav-container .links {
     display: flex;
     gap: 3rem;
     align-items: center;
+    margin-left: 800px;
 }
 
 .nav-container .links a {
@@ -54,7 +67,7 @@ nav {
     left: 0;
     width: 0%;
     height: 3px;
-    background-color: #0c3d25;
+    background-color: rgb(17, 100, 80);
     transition: 0.2s linear;
 }
 
@@ -64,34 +77,237 @@ nav {
 }
 
 .nav-container .contact-btn {
-    background-color: transparent;
+    background-color: rgb(17, 100, 80);
     padding: 10px 25px;
     border-radius: 20px;
-    border: 2px solid rgba(22, 65, 11, 0.2);
+    border: 2px solid rgb(17, 100, 80);
     transition: 0.3s linear;
 }
 
 .nav-container .contact-btn a {
     color: rgba(255, 255, 255, 0.959);
+    transition: 0.3s linear;
 }
 
 .nav-container .contact-btn:hover,
 .nav-container .contact-btn:hover a {
-    background-color: rgba(29, 83, 15, 0.411);
+    background-color: rgba(172, 235, 157, 0.411);
     color: white;
 }
 
-#about .main-container-about img {
-    width: 300px;
+.nav-container .links a:hover {
+    color: rgb(17, 100, 80);
+}
+
+/* this is built-in dropdown component style
+.dropdown{
+z-index: 100;
+position: absolute;
+top: 0;
+transform: translateY(0px);
+width: 100%;
+height: auto;
+backdrop-filter: brightness(40%) blur(3px);
+box-shadow: 0 0 20px black;
+transition: 0.2s linear;
+}
+
+dropdown .links a{
+color: white;
+display: flex;
+text-decoration: none;
+justify-content: center;
+padding: 15px 0;
+align-items: center;
+transition: 0.2s linear;
+}
+
+.dropdown .links a:hover{
+background-color: blue;
+}
+*/
+
+/*Next Part: Home*/
+#home {
+    width: 100%;
+    height: 90vh;
+}
+
+#home .main-container-home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*STUDY*/
+#home .main-container-home .image {
+    z-index: -1;
+    width: 25%;
+}
+
+#home .main-container-home .image img {
+    width: 530px;
     /* Adjust size as needed */
-    height: 300px;
+    height: 600px;
     /* Ensure a perfect circle */
     border-radius: 50%;
     /* Makes it circular */
-    border: 5px solid #88e78b;
+    border: 5px solid #2a442b;
     /* Add a green border */
     box-shadow: 0 4px 8px rgba(8, 8, 8, 0.2);
     /* Adds depth */
     object-fit: cover;
     /* Ensures the image fills the frame */
+}
+
+#home .main-container-home .content {
+    color: black;
+    width: 20%;
+    min-height: 100px;
+}
+
+.content h1 {
+    font-size: clamp(1rem, 2rem + 5vw, 3rem);
+}
+
+.content h1 span {
+    color: black;
+}
+
+.content .developer {
+    font-weight: 600;
+    font-size: clamp(1rem, 1rem + 5vw, 2rem);
+}
+
+.content .developer span {
+    color: black;
+    font-size: 2.5rem;
+    position: relative;
+    transition: 0.3s linear;
+}
+
+/*STUDY*/
+.developer span::before {
+    content: "Developer";
+    animation: words 15s infinite;
+}
+
+/*STUDY*/
+.developer span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    animation: cursor 0.6s linear;
+}
+
+/*STUDY*/
+@keyframes cursor {
+    to {
+        border-left: 3px solid #01160c
+    }
+}
+
+/*STUDY*/
+@keyframes words {
+
+    0%,
+    33% {
+        content: "Developer";
+    }
+
+    34%,
+    66% {
+        content: "Creator";
+    }
+
+    67%,
+    100% {
+        content: "Designer"
+    }
+}
+
+.social-links i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid rgb(21, 117, 42);
+    border-radius: 50%;
+    color: rgb(14, 87, 32);
+    margin: 5px 10px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+
+.social-links i:hover {
+    scale: 0.8;
+    color: white;
+    background-color: rgba(172, 235, 157, 0.411);
+    /* This lights up the icon */
+    filter: drop-shadow(0 0 10px);
+}
+
+.content .btn button {
+    width: 40%;
+    height: 5.5vh;
+    margin: 5px;
+    background-color: rgba(22, 65, 11, 0.699);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 98%;
+    font-weight: 650;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.content .btn button:hover {
+    color: rgba(172, 235, 157, 0.411);
+    border: 2px solid rgba(172, 235, 157, 0.411);
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px rgba(172, 235, 157, 0.411);
+}
+
+@media (max-width:884px) {
+    body {
+        overflow-y: visible;
+    }
+
+    nav .logo {
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .main-container-about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .links {
+        display: none;
+    }
+
+    .main-container-about .content {
+        width: 80%;
+    }
+
+    .social-links i {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .main-container-about .image {
+        width: 80%;
+        margin-bottom: 0px;
+    }
 }

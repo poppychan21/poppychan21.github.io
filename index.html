@@ -13,6 +13,9 @@
 <body>
     <nav>
         <div class="nav-container">
+            <div class="logo">
+                <span></span>
+            </div>
             <div class="links">
                 <div class="link"> <a href="#home">Home</a></div>
                 <div class="link"> <a href="#about">About</a></div>
@@ -20,17 +23,45 @@
                 <div class="link"> <a href="#projects">Projects</a></div>
                 <div class="contact-btn"><a href="#contact">Contact Me</a></div>
             </div>
+            <!-- THIS IS DROPDOWN COMPONENT #1
+            <i class="fa-solid fa-bars"></i>
+            -->
         </div>
+        <!-- THIS IS DROPDOWN COMPONENT #1
+            <div class="dropdown">
+                <div class="links">
+                    <a href="">Home</a>
+                    <a href="">Home</a>
+                    <a href="">Home</a>
+                    <a href="">Home</a>
+                    <a href="">Home</a>
+                </div>
+            </div>
+            -->
     </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="main-container-about">
-            <img src="/assets/main_image.jfif" alt="">
+    <section id="home">
+        <div class="main-container-home">
+            <div class="image">
+                <img src="/assets/main_image.jfif" alt="">
+            </div>
+            <div class="content">
+                <h1>Hello! I'm <span>Kim.</span></h1>
+                <div class="developer">I'm a <span></span> </div>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <!-- add more if needed-->
+                </div>
+                <div class="btn">
+                    <button>Download CV</button>
+                </div>
+            </div>
         </div>
-        <p>Write a short introduction about yourself here.</p>
     </section>
 
+    <!-- PROJECT SECTION
     <section id="projects">
         <h2>Projects</h2>
         <div class="main-container-project">
@@ -39,18 +70,11 @@
             <a href="#">View Project</a>
         </div>
     </section>
+-->
 
     <section id="contact">
-        <h1>Hey I'm <span>Kim</span></h1>
         <div class="main-container-contact">
-            <div class="social-links">
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <!-- add more if needed-->
-            </div>
-            <div class="btn">
-                <button>Download CV</button>
-            </div>
+            <!-- ADD CONTACTS IF NEEDED-->
         </div>
     </section>
 
