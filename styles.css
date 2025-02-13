@@ -173,18 +173,20 @@ background-color: blue;
 }
 
 .main-container .image img {
-    width: 530px;
     /* Adjust size as needed */
-    height: 600px;
+    width: 530px;
     /* Ensure a perfect circle */
-    border-radius: 50%;
+    height: 600px;
     /* Makes it circular */
+    border-radius: 50%;
+    /*
     border: 5px solid #2a442b;
-    /* Add a green border */
-    box-shadow: 0 4px 8px rgba(8, 8, 8, 0.2);
+    Add a green border
+    */
     /* Adds depth */
-    object-fit: cover;
+    box-shadow: 0 0 25px rgba(3, 45, 56, 0.97);
     /* Ensures the image fills the frame */
+    object-fit: cover;
 }
 
 /* This controls the content's container (picture and text) */
@@ -637,18 +639,18 @@ background-color: blue;
     }
 
     .main-container .image img {
-        width: 350px;
         /* Adjust size as needed */
-        height: 370px;
+        width: 350px;
         /* Ensure a perfect circle */
-        border-radius: 50%;
+        height: 370px;
         /* Makes it circular */
-        border: 5px solid #2a442b;
-        /* Add a green border */
-        box-shadow: 0 4px 8px rgba(8, 8, 8, 0.2);
+        border-radius: 50%;
         /* Adds depth */
-        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(8, 8, 8, 0.2);
         /* Ensures the image fills the frame */
+        object-fit: cover;
+        /* add box-shadow behind the img */
+        box-shadow: 0 0 25px rgba(3, 45, 56, 0.643);
     }
 
     .social-links i {
@@ -680,6 +682,9 @@ background-color: blue;
         padding: 25px;
         top: 15px;
     }
+
+    /* Educations */
+
 
     /* Skills */
     .skills .content {
