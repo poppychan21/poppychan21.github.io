@@ -427,7 +427,7 @@ background-color: blue;
 }
 
 .skills .content .col-right .bar .css::before {
-    width: 50%;
+    width: 55%;
     background-color: #1850b9;
 }
 
@@ -449,6 +449,11 @@ background-color: blue;
 .skills .content .col-right .bar .c::before {
     width: 75%;
     background-color: #bd29db;
+}
+
+.skills .content .col-right .bar .typescript::before {
+    width: 55%;
+    background-color: #061e61;
 }
 
 /* EDUCATION SECTION */
