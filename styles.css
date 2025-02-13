@@ -25,7 +25,7 @@ body {
     /* This disables scrolling the webpage(s)
     overflow: hidden;
     */
-    background: linear-gradient(to right, rgb(226, 224, 224), #7fe9c0);
+    background: #7cc4a8;
 }
 
 .title {
@@ -215,7 +215,7 @@ background-color: blue;
 /*STUDY*/
 .developer span::after {
     content: "";
-    background-color: #7fe9c0;
+    background-color: #7cc4a8;
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
@@ -334,14 +334,14 @@ background-color: blue;
 
 
 /* NEXT PART: ABOUT SECTION */
-.box {
+.small-box {
     width: 1000px;
-    height: 500px;
-    background-color: rgba(125, 219, 125, 0.432);
+    height: 400px;
+    background-color: rgba(65, 138, 65, 0.432);
     position: relative;
     margin: auto;
-    top: 50%;
     border-radius: 30px;
+    top: 50%;
 }
 
 .content-title {
@@ -352,7 +352,7 @@ background-color: blue;
 
 .about .content .paragraph-text {
     font-size: 1.5rem;
-    padding: 50px;
+    padding: 70px;
 }
 
 /* NEXT PART: SKILLS SECTION */
@@ -459,9 +459,12 @@ background-color: blue;
 }
 
 /* This creates the section display in background color */
-.education {
+.big-box {
     padding: 100px 15px;
-    background: rgb(37, 173, 67);
+    background: rgb(58, 134, 75);
+    position: relative;
+    margin: auto;
+    border-radius: 30px;
 }
 
 .education h2 {
