@@ -459,12 +459,9 @@ background-color: blue;
 }
 
 /* This creates the section display in background color */
-.big-box {
+.education {
     padding: 100px 15px;
     background: rgb(58, 134, 75);
-    position: relative;
-    margin: auto;
-    border-radius: 30px;
 }
 
 .education h2 {
@@ -566,6 +563,19 @@ background-color: blue;
 ::-webkit-scrollbar-track {
     background-color: #56ac8b;
 
+}
+
+/* PROJECT SECTION */
+/* This creates the section display in background color */
+.projects {
+    padding: 100px 15px;
+    background: rgb(58, 134, 75);
+}
+
+/* FOOTER SECTION */
+.footer {
+    padding: 5px 10px;
+    background: rgb(58, 134, 75);
 }
 
 /* This controls when mobile or when screen is windowed */
