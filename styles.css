@@ -6,16 +6,39 @@
 }
 
 html {
+    /* This keep horizontal overflow hidden but allow vertical scrolling */
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+section {
+    transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+    /* Ensure padding so content stays aligned */
+    padding: 20px;
+    /* Minimum height to fill the viewport */
+    min-height: 100vh;
 }
 
 body {
     width: 100%;
     height: 100vh;
+    /* This disables scrolling the webpage(s)
     overflow: hidden;
-    background: linear-gradient(to right, rgb(226, 224, 224), #7be2bb, #8ab98a);
+    */
+    background: linear-gradient(to right, rgb(226, 224, 224), #7fe9c0);
 }
 
+.title {
+    /* Centers the text */
+    text-align: center;
+    /* Adds space below the title */
+    margin-bottom: 15px;
+    margin-top: 55px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* NAVIGATION SECTION */
 nav {
     width: 100%;
     height: 10vh;
@@ -76,7 +99,7 @@ nav {
     width: 100%;
 }
 
-.nav-container .contact-btn {
+.nav-container .resume-btn {
     background-color: rgb(17, 100, 80);
     padding: 10px 25px;
     border-radius: 20px;
@@ -84,13 +107,13 @@ nav {
     transition: 0.3s linear;
 }
 
-.nav-container .contact-btn a {
+.nav-container .resume-btn a {
     color: rgba(255, 255, 255, 0.959);
     transition: 0.3s linear;
 }
 
-.nav-container .contact-btn:hover,
-.nav-container .contact-btn:hover a {
+.nav-container .resume-btn:hover,
+.nav-container .resume-btn:hover a {
     background-color: rgba(172, 235, 157, 0.411);
     color: white;
 }
@@ -127,13 +150,13 @@ background-color: blue;
 }
 */
 
-/*Next Part: Home*/
+/* NEXT PART: HOME */
 #home {
     width: 100%;
     height: 90vh;
 }
 
-#home .main-container-home {
+.main-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -142,12 +165,12 @@ background-color: blue;
 }
 
 /*STUDY*/
-#home .main-container-home .image {
+#home .main-container .image {
     z-index: -1;
     width: 25%;
 }
 
-#home .main-container-home .image img {
+#home .main-container .image img {
     width: 530px;
     /* Adjust size as needed */
     height: 600px;
@@ -162,52 +185,49 @@ background-color: blue;
     /* Ensures the image fills the frame */
 }
 
-#home .main-container-home .content {
-    color: black;
+/* This controls the content's container (picture and text) */
+#home .main-container .content {
     width: 20%;
     min-height: 100px;
 }
 
 .content h1 {
-    font-size: clamp(1rem, 2rem + 5vw, 3rem);
-}
-
-.content h1 span {
-    color: black;
+    font-size: clamp(1rem, 2rem + 2vw, 3rem);
 }
 
 .content .developer {
     font-weight: 600;
     font-size: clamp(1rem, 1rem + 5vw, 2rem);
+    min-width: 280px;
 }
 
 .content .developer span {
-    color: black;
-    font-size: 2.5rem;
     position: relative;
-    transition: 0.3s linear;
 }
 
 /*STUDY*/
 .developer span::before {
     content: "Developer";
-    animation: words 15s infinite;
+    color: #000302;
+    animation: words 20s infinite;
 }
 
 /*STUDY*/
 .developer span::after {
     content: "";
+    background-color: #7fe9c0;
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    border-left: 3px solid black;
-    animation: cursor 0.6s linear;
+    border-left: 3px solid rgba(23, 241, 70, 0.301);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }
 
 /*STUDY*/
 @keyframes cursor {
     to {
-        border-left: 3px solid #01160c
+        border-left: 2px solid #000302
     }
 }
 
@@ -215,18 +235,55 @@ background-color: blue;
 @keyframes words {
 
     0%,
-    33% {
-        content: "Developer";
+    20% {
+        content: "Web Developer";
     }
 
-    34%,
-    66% {
+    21%,
+    40% {
         content: "Creator";
     }
 
-    67%,
-    100% {
+    41%,
+    60% {
         content: "Designer"
+    }
+
+    61%,
+    80% {
+        content: "Software Engineer"
+    }
+
+    81%,
+    100% {
+        content: "Data Analyst"
+    }
+}
+
+@keyframes typing {
+
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80% {
+        width: calc(100% + 8px);
     }
 }
 
@@ -275,11 +332,246 @@ background-color: blue;
     box-shadow: 0 0 40px rgba(172, 235, 157, 0.411);
 }
 
+
+/* NEXT PART: ABOUT SECTION */
+.box {
+    width: 1000px;
+    height: 500px;
+    background-color: rgba(125, 219, 125, 0.432);
+    position: relative;
+    margin: auto;
+    top: 50%;
+    border-radius: 30px;
+}
+
+.content-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.about .content .paragraph-text {
+    font-size: 1.5rem;
+    padding: 50px;
+}
+
+/* NEXT PART: SKILLS SECTION */
+.skills .title .content-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-top: 100px;
+}
+
+.skills .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    margin-top: 100px;
+}
+
+.skills .content .col-left {
+    position: relative;
+    width: 55%;
+}
+
+.skills .content .col-left .content-title {
+    margin-bottom: 20px;
+}
+
+.skills .content .col-right {
+    position: relative;
+    width: 35%;
+}
+
+.skills .content .col-right .bar {
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.skills .content .col-right .bar .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.skills .content .col-right .bar .info span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.skills .content .col-right .bar .line {
+    position: relative;
+    width: 100%;
+    height: 15px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.skills .content .col-right .bar .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+}
+
+.skills .content .col-right .bar .html::before {
+    width: 78%;
+    background-color: #12aabe;
+}
+
+.skills .content .col-right .bar .css::before {
+    width: 50%;
+    background-color: #1850b9;
+}
+
+.skills .content .col-right .bar .cpp::before {
+    width: 95%;
+    background-color: #b8ae24;
+}
+
+.skills .content .col-right .bar .sql::before {
+    width: 84%;
+    background-color: #c2da57;
+}
+
+.skills .content .col-right .bar .python::before {
+    width: 69%;
+    background-color: #db2941;
+}
+
+.skills .content .col-right .bar .c::before {
+    width: 75%;
+    background-color: #bd29db;
+}
+
+/* EDUCATION SECTION */
+.heading {
+    font-size: 5rem;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+/* This creates the section display in background color */
+.education {
+    padding: 100px 15px;
+    background: rgb(37, 173, 67);
+}
+
+.education h2 {
+    margin-bottom: 5rem;
+}
+
+.education .timeline-items {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.education .timeline-items::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: #7fe9c0;
+    left: calc(50% - 1px);
+}
+
+.education .timeline-item {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.education .timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.education .timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.education .timeline-item:nth-child(even) {
+    padding-left: calc(50% + 30px);
+}
+
+.education .timeline-dot {
+    height: 21px;
+    width: 21px;
+    background-color: #7fe9c0;
+    box-shadow: 0 0 25px #7fe9c0,
+        0 0 50px #7fe9c0;
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.education .timeline-date {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin: 6px 0 15px;
+}
+
+.education .timeline-content {
+    background-color: #56ac8b;
+    border: 3px solid #7fe9c0;
+    padding: 30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0 10px #7fe9c0;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.education .timeline-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #7fe9c0;
+}
+
+.education .timeline-content h3 {
+    font-size: 20px;
+    color: white;
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+
+.education .timeline-content p {
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7fe9c0;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #56ac8b;
+
+}
+
+/* This controls when mobile or when screen is windowed */
 @media (max-width:884px) {
     body {
         overflow-y: visible;
     }
 
+    /* Navigation */
     nav .logo {
         position: absolute;
         top: 16px;
@@ -309,5 +601,19 @@ background-color: blue;
     .main-container-about .image {
         width: 80%;
         margin-bottom: 0px;
+    }
+
+    /* Skills */
+    .skills .content {
+        flex-direction: column;
+    }
+
+    .skills .content .column {
+        position: relative;
+        width: 100%;
+    }
+
+    .skills .content .col-right {
+        margin-top: 40px;
     }
 }

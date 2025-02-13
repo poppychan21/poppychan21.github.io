@@ -6,8 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kim Portfolio</title>
+    <!-- AOS CSS -->
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
 <body>
@@ -21,11 +23,11 @@
                 <div class="link"> <a href="#about">About</a></div>
                 <div class="link"><a href="#skills">Skills</a></div>
                 <div class="link"> <a href="#projects">Projects</a></div>
-                <div class="contact-btn"><a href="#contact">Contact Me</a></div>
+                <div class="resume-btn"><a href="#resume" onclick="downloadResume()">Resume</a></div>
             </div>
             <!-- THIS IS DROPDOWN COMPONENT #1
-            <i class="fa-solid fa-bars"></i>
-            -->
+            <i class=" fa-solid fa-bars"></i>
+        -->
         </div>
         <!-- THIS IS DROPDOWN COMPONENT #1
             <div class="dropdown">
@@ -40,8 +42,8 @@
             -->
     </nav>
 
-    <section id="home">
-        <div class="main-container-home">
+    <section class="home" id="home">
+        <div class="main-container">
             <div class="image">
                 <img src="/assets/main_image.jfif" alt="">
             </div>
@@ -49,9 +51,11 @@
                 <h1>Hello! I'm <span>Kim.</span></h1>
                 <div class="developer">I'm a <span></span> </div>
                 <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/poppychan21" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/hankim.doannguyen" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/kim-han-nguyen" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
                     <!-- add more if needed-->
                 </div>
                 <div class="btn">
@@ -61,20 +65,180 @@
         </div>
     </section>
 
-    <!-- PROJECT SECTION
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="main-container-project">
-            <h3>Project Name</h3>
-            <p>Description of the project.</p>
-            <a href="#">View Project</a>
+    <!-- ABOUT ME SECTION -->
+    <section class="about" id="about">
+        <div class="title">
+            <h2 data-aos="fade-up" data-aos-duration="1000">About Me</h2>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="paragraph-text" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
+                    I am passionate developer with a bachelor's degree in Computer Science from University of
+                    California, Davis. I graduated in
+                    Fall 2024 and am eager to apply my skills and knowledge to real-world projects.
+
+                    I specialize in building intuitive and responsive applications, focusing on both front-end and
+                    full-stack development, as well as software engineer. I enjoy crafting seamless user experiences,
+                    optimizing performance, and
+                    exploring new technologies to stay ahead in the field.
+
+                    I'm always looking for opportunities to learn, grow, and collaborate on exciting projects.
+                </div>
+            </div>
         </div>
     </section>
--->
 
-    <section id="contact">
-        <div class="main-container-contact">
-            <!-- ADD CONTACTS IF NEEDED-->
+    <!-- EDUCATION SECTION -->
+    <section class="education" id="education">
+        <div class="title">
+            <h2 class="heading" data-aos="fade-up" data-aos-duration="1000">Education</h2>
+        </div>
+
+        <div class="timeline-items">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2021
+                    <div class="timeline-content">
+                        <h3>High School</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula, nunc ac
+                            convallis ultrices, nisi metus efficitur nulla, in pretium arcu turpis non lectus.
+                            Vestibulum gravida, nulla vel vestibulum rhoncus, eros ligula tempus arcu, sed pharetra
+                            mi turpis et est. Nam nec diam vitae felis aliquet tincidunt. Proin vitae ex nec nisl
+                            maximus aliquet. Sed convallis libero ut augue ullamcorper, a suscipit eros dapibus.
+                            Nullam ultricies, est et interdum luctus, nunc velit elementum lacus, in eleifend tortor
+                            orci et purus.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"> </div>
+                <div class="timeline-date">2022
+                    <div class="timeline-content">
+                        <h3>University</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula, nunc ac
+                            convallis ultrices, nisi metus efficitur nulla, in pretium arcu turpis non lectus.
+                            Vestibulum gravida, nulla vel vestibulum rhoncus, eros ligula tempus arcu, sed pharetra
+                            mi turpis et est. Nam nec diam vitae felis aliquet tincidunt. Proin vitae ex nec nisl
+                            maximus aliquet. Sed convallis libero ut augue ullamcorper, a suscipit eros dapibus.
+                            Nullam ultricies, est et interdum luctus, nunc velit elementum lacus, in eleifend tortor
+                            orci et purus.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023
+                    <div class="timeline-content">
+                        <h3>Volunteers</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula, nunc ac
+                            convallis ultrices, nisi metus efficitur nulla, in pretium arcu turpis non lectus.
+                            Vestibulum gravida, nulla vel vestibulum rhoncus, eros ligula tempus arcu, sed pharetra
+                            mi turpis et est. Nam nec diam vitae felis aliquet tincidunt. Proin vitae ex nec nisl
+                            maximus aliquet. Sed convallis libero ut augue ullamcorper, a suscipit eros dapibus.
+                            Nullam ultricies, est et interdum luctus, nunc velit elementum lacus, in eleifend tortor
+                            orci et purus.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024
+                    <div class="timeline-content">
+                        <h3>Coding Hackathon</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula, nunc ac
+                            convallis ultrices, nisi metus efficitur nulla, in pretium arcu turpis non lectus.
+                            Vestibulum gravida, nulla vel vestibulum rhoncus, eros ligula tempus arcu, sed pharetra
+                            mi turpis et est. Nam nec diam vitae felis aliquet tincidunt. Proin vitae ex nec nisl
+                            maximus aliquet. Sed convallis libero ut augue ullamcorper, a suscipit eros dapibus.
+                            Nullam ultricies, est et interdum luctus, nunc velit elementum lacus, in eleifend tortor
+                            orci et purus.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILL SECTION -->
+    <section class="skills" id="skills">
+        <div class="title">
+            <h2 data-aos="fade-up" data-aos-duration="1000">My Skills</h2>
+        </div>
+        <div class="content">
+            <div class="column col-left">
+                <h2 class="content-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200"> My Skills
+                    and Experiences</h2>
+                <div class="paragraph-text" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur vehicula, nunc ac convallis ultrices, nisi metus efficitur nulla,
+                    in pretium arcu turpis non lectus. Vestibulum gravida, nulla vel vestibulum rhoncus,
+                    eros ligula tempus arcu, sed pharetra mi turpis et est. Nam nec diam vitae felis aliquet
+                    tincidunt.
+                    Proin vitae ex nec nisl maximus aliquet. Sed convallis libero ut augue ullamcorper, a suscipit
+                    eros
+                    dapibus.
+                    Nullam ultricies, est et interdum luctus, nunc velit elementum lacus, in eleifend tortor orci et
+                    purus.
+                </div>
+            </div>
+            <div class="column col-right">
+                <div class="bar">
+                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
+                        <span>C++</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="line cpp" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200"></div>
+                </div>
+                <div class="bar">
+                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
+                        <span>C</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="line c" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200"></div>
+                </div>
+                <div class="bar">
+                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
+                        <span>HTML</span>
+                        <span>78%</span>
+                    </div>
+                    <div class="line html" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200"></div>
+                </div>
+                <div class="bar">
+                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
+                        <span>CSS</span>
+                        <span>55%</span>
+                    </div>
+                    <div class="line css" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200"></div>
+                </div>
+                <div class="bar">
+                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
+                        <span>SQL</span>
+                        <span>84%</span>
+                    </div>
+                    <div class="line sql" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200"></div>
+                </div>
+                <div class="bar">
+                    <div class="info" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200">
+                        <span>Python</span>
+                        <span>69%</span>
+                    </div>
+                    <div class="line python" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT SECTION -->
+    <section class="projects" id="projects">
+        <div class="title">
+            <h2 data-aos="fade-up" data-aos-duration="1000">My Projects</h2>
+        </div>
+        <div class="content">
         </div>
     </section>
 
@@ -82,7 +246,21 @@
         <p>&copy; 2025 Kim Han Nguyen. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Link to your JavaScript file
+    src="script.js"
+    -->
+    <script>
+        AOS.init();
+
+        // This function downloads the file
+        function downloadResume() {
+            const link = document.createElement('a');
+            link.href = '/assets/files/Kim_Han_Nguyen_Resume_2025.pdf';
+            link.download = 'Kim_Han_Nguyen_Resume_2025.pdf';
+            link.click(); // Trigger the download
+        }
+    </script>
 </body>
 
 </html>
