@@ -612,11 +612,10 @@ background-color: blue;
     gap: 100px;
 }
 
-.project .content .row {
+.projects .content .row {
     display: flex;
     gap: 20px;
 }
-
 
 
 /* This controls when mobile or when screen is windowed */
