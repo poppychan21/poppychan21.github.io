@@ -62,7 +62,7 @@ body {
 }
 
 .logo span {
-    text-shadow: 0 0 25px #7cc4a8;
+    color: rgb(3, 96, 74);
     display: inline;
 }
 
@@ -673,7 +673,8 @@ background-color: blue;
 
     .main-container .image {
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+        margin-top: 55px;
     }
 
     .home .content {
